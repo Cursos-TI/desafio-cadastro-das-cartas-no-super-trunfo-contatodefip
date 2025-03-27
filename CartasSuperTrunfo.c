@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h> // Inclusão da biblioteca string.
 
-// Desafio Super Trunfo - Paíseso.
+// Desafio Super Trunfo - Países.
 // Desenvolvido por Anderson Ferreira Fontes
 
 int main() {
@@ -41,7 +41,7 @@ int main() {
     printf("Nome da Cidade: %s\n", nome_da_cidade1);
     printf("População: %d de Habitantes\n", populacao1);
     printf("Área Total: %.2f Km²\n", area_territorio1);
-    printf("PIB: %.2f Bilhões de reais\n", PIB1);
+    printf("PIB: %.2f Bilhões de reais\n", PIB1 / 1000000000.0);
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos1);
 
     printf("\n\nMeus Parabéns!\n\n"); // Para facilitar a experiência do usuário.
@@ -66,7 +66,7 @@ int main() {
     printf("Nome da Cidade: %s\n", nome_da_cidade2);
     printf("População: %d de Habitantes\n", populacao2);
     printf("Área Total: %.2f Km²\n", area_territorio2);
-    printf("PIB: %.2f Bilhões de reais\n", PIB2);
+    printf("PIB: %.2f Bilhões de reais\n", PIB2 / 1000000000.0);
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos2);
 
     printf("\n\nMeus Parabéns! Você completou o jogo.\n\n"); // Para facilitar a experiência do usuário.
