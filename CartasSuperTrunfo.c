@@ -2,6 +2,7 @@
 #include <string.h> // Inclusão da biblioteca string.
 
 // Desafio Super Trunfo - Países.
+// Nível Aventureiro
 // Desenvolvido por Anderson Ferreira Fontes
 
 int main() {
@@ -9,12 +10,12 @@ int main() {
     // Variáveis da carta 1:
     int populacao1, num_pontos_turisticos1;
     char estado1[2], codigo_da_carta1[4], nome_da_cidade1[51];
-    float area_territorio1, PIB1;
+    float area_territorio1, PIB1, PIBperCapita1, densidade1;
 
     //Variáveis da carta 2:
     int populacao2, num_pontos_turisticos2;
     char estado2[2], codigo_da_carta2[4], nome_da_cidade2[51];
-    float area_territorio2, PIB2;
+    float area_territorio2, PIB2, PIBpercapita2, densidade2;
     
     // TÍTULO E SUBTÍTULO DO JOGO
 
@@ -33,6 +34,10 @@ int main() {
     printf("Digite o PIB (Ex.: 789.52): "); scanf("%f", &PIB1);
     printf("Digite Número de Pontos Turísticos (Ex.: 154): "); scanf("%d", &num_pontos_turisticos1);
 
+    // Definindo as operações de PIB percapita e Densidade Populacional da Carta 1
+    PIBperCapita1 = PIB1 / populacao1; // Cálculo do PIB Per capita da carta 1;
+    densidade1 = (float) populacao1 / area_territorio1; // Cálculo da Densidade Populacional da carta 1.
+
     //Impressão dos dados da Carta 1:
     printf("\n\nDADOS DA CARTA 1\n\n");
 
@@ -43,6 +48,8 @@ int main() {
     printf("Área Total: %.2f Km²\n", area_territorio1);
     printf("PIB: %.2f Bilhões de reais\n", PIB1 / 1000000000.0);
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB Per Capita: %.2f reais\n", PIBperCapita1 * 1000);
 
     printf("\n\nMeus Parabéns!\n\n"); // Para facilitar a experiência do usuário.
 
@@ -58,6 +65,10 @@ int main() {
     printf("Digite o PIB (Ex.: 789.52): "); scanf("%f", &PIB2);
     printf("Digite Número de Pontos Turísticos (Ex.: 154): "); scanf("%d", &num_pontos_turisticos2);
 
+    // Definindo as operações de PIB percapita e Densidade Populacional da Carta 2
+    PIBpercapita2 = PIB2 / populacao2; // Cálculo do PIB Per capita da carta 2;
+    densidade2 = (float) populacao2 / area_territorio2; // Cálculo da Densidade Populacional da carta 2.
+
     //Impressão dos dados da Carta 2:
     printf("\n\nDADOS DA CARTA 2\n\n");
 
@@ -68,6 +79,8 @@ int main() {
     printf("Área Total: %.2f Km²\n", area_territorio2);
     printf("PIB: %.2f Bilhões de reais\n", PIB2 / 1000000000.0);
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB Per Capita: %.2f reais", PIBpercapita2 * 1000);
 
     printf("\n\nMeus Parabéns! Você completou o jogo.\n\n"); // Para facilitar a experiência do usuário.
 
