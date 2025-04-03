@@ -57,7 +57,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB Per Capita: %.2f reais\n", PIBperCapita1 * 1000);
-    printf("Seu super da carta 1: %f\n\n", superPoder1); // Impressão do super poder da cart 1
+    printf("Super Poder da carta 1: %f\n\n", superPoder1); // Impressão do super poder da cart 1
 
     // Entrada dos dados da Carta 2:
     printf("AGORA INSIRA OS DADOS DA CARTA 2:\n\n");
@@ -91,16 +91,19 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", num_pontos_turisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB Per Capita: %.2f reais\n", PIBpercapita2 * 1000);
-    printf("Seu super da carta 2: %f\n\n", superPoder2); // Impressão do super poder da cart 2
+    printf("Super Poder da carta 2: %f", superPoder2); // Impressão do super poder da cart 2
 
-    // Comparação das Cartas:
-    printf("População: Carta %d venceu (%d)\n", (populacao1 > populacao2) ? 1 : 2, (populacao1 > populacao2) ? 1 : 0);
-    printf("Área: Carta %d venceu (%d)\n", (area_territorio1 > area_territorio2) ? 1 : 2, (area_territorio1 > area_territorio2) ? 1 : 0);
-    printf("PIB: Carta %d venceu (%d)\n", (PIB1 > PIB2) ? 1 : 2, (PIB1 > PIB2) ? 1 : 0);
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", (num_pontos_turisticos1 > num_pontos_turisticos2) ? 1 : 2, (num_pontos_turisticos1 > num_pontos_turisticos2) ? 1 : 0);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", (densidade1 < densidade2) ? 1 : 2, (densidade1 < densidade2) ? 1 : 0); // Menor valor vence
-    printf("PIB per Capita: Carta %d venceu (%d)\n", (PIBperCapita1 > PIBpercapita2) ? 1 : 2, (PIBperCapita1 > PIBpercapita2) ? 1 : 0);
-    printf("Super Poder: Carta %d venceu (%d)\n", (superPoder1 > superPoder2) ? 1 : 2, (superPoder1 > superPoder2) ? 1 : 0);
+    // Comparação das Cartas (Atributo: População):
+    printf("\n\nCOMPARAÇÃO DAS CARTAS\n\n");
+
+    printf("Carta 1 - %s -  %d Habitantes;", nome_da_cidade1, populacao1);
+    printf("\nCarta 2 - %s -  %d Habitantes;", nome_da_cidade2, populacao2);
+
+    if (populacao1 > populacao2) {
+        printf("\nResultado: Carta 1 (%s) venceu!  ", nome_da_cidade1);
+    } else{
+        printf("\nResultado: Carta 2 (%s) venceu!  ", nome_da_cidade2);
+    }
     
     // Fim do jogo.
     printf("\n\nMeus Parabéns! Você completou o jogo.\n\n"); // Para facilitar a experiência do usuário.
